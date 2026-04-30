@@ -1,7 +1,16 @@
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
-window.scrollTo(0, 0);
+
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 10);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Toggle
