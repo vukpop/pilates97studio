@@ -152,7 +152,7 @@ nav {
   font-size: clamp(4rem, 8vw, 8rem);
   letter-spacing: -0.02em;
   margin-bottom: 2rem;
-  width: fit-content;
+  width: 100%;
 }
 
 .title-line {
@@ -243,6 +243,10 @@ nav {
 .aesthetic-grid .large-img {
   aspect-ratio: 16/9;
   overflow: hidden;
+}
+
+.oprema-text {
+  margin-bottom: 4rem;
 }
 
 /* Button Aesthetic */
@@ -363,23 +367,51 @@ footer {
     grid-template-columns: 1fr;
     padding-top: 8rem;
     gap: 3rem;
+    align-items: start;
+    min-height: auto;
+  }
+  .title-display {
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+    margin-top: 2rem;
+    text-align: center;
   }
   .hero-text {
     padding-right: 0;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .hero-image-wrapper {
     height: 60vh;
   }
+  .container {
+    padding: 0 1.25rem;
+  }
   .grid-2, .aesthetic-grid {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
   .image-block {
     order: -1; /* Image above text on mobile */
+  }
+  .section-padding {
+    padding: 5rem 0;
+  }
+  .address-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .oprema-text {
+    margin-bottom: 2rem;
   }
   header {
     mix-blend-mode: normal;
     color: var(--color-text);
     padding: 1rem 0;
+    background-color: var(--color-bg);
   }
   nav {
     justify-content: space-between;
