@@ -388,8 +388,8 @@ footer {
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .hero-image-wrapper {
@@ -397,7 +397,7 @@ footer {
   }
 
   .container {
-    padding: 0 10vw;
+    padding: 0 1.5rem;
   }
 
   .grid-2,
@@ -416,15 +416,27 @@ footer {
   }
 
   .text-block {
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .text-block h2 {
     font-size: clamp(2.2rem, 8vw, 3rem);
-    text-align: center;
+    text-align: left;
+  }
+
+  /* Prevent forced breaks in headers from making them too tall on mobile */
+  h2 br {
+    display: none;
+  }
+
+  .text-block p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text); /* Slightly darker for better mobile contrast */
+    max-width: none;
   }
 
   .address-bar {
