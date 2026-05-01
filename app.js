@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Sticky Header Effect
     const header = document.getElementById('header');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Scroll Reveal Animations Observer
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     const revealOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
     };
 
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    const revealOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 return;
