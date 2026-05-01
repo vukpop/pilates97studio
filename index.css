@@ -397,13 +397,13 @@ footer {
   }
 
   .container {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
 
   .grid-2,
   .aesthetic-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
   }
 
   .image-block {
@@ -434,9 +434,18 @@ footer {
 
   .text-block p {
     font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--color-text); /* Slightly darker for better mobile contrast */
+    line-height: 1.8;
+    color: var(--color-text);
     max-width: none;
+    margin-bottom: 2rem;
+    letter-spacing: 0.01em;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: none;
+    margin-bottom: 2.5rem;
   }
 
   .address-bar {
