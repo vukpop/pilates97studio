@@ -36,6 +36,8 @@ body {
   font-family: var(--font-sans);
   color: var(--color-text);
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -68,11 +70,13 @@ img {
 }
 
 /* Layout */
+section,
 .container {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 6vw;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Header */
@@ -388,8 +392,8 @@ footer {
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-image-wrapper {
@@ -416,15 +420,15 @@ footer {
   }
 
   .text-block {
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .text-block h2 {
     font-size: clamp(2.2rem, 8vw, 3rem);
-    text-align: left;
+    text-align: center;
   }
 
   /* Prevent forced breaks in headers from making them too tall on mobile */
@@ -439,6 +443,7 @@ footer {
     max-width: none;
     margin-bottom: 2rem;
     letter-spacing: 0.01em;
+    padding: 0 5%;
   }
 
   .subtitle {
@@ -446,6 +451,7 @@ footer {
     line-height: 1.8;
     max-width: none;
     margin-bottom: 2.5rem;
+    padding: 0 10%;
   }
 
   .address-bar {
@@ -501,5 +507,32 @@ footer {
 
   .gallery-scroll img {
     height: 350px;
+  }
+}
+
+/* Mobile specific fixes (<= 768px) */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+
+  .grid,
+  .grid-2,
+  .aesthetic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ensure buttons and cards don't overflow */
+  .btn-elegant,
+  .image-block,
+  .map-container {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero-image-wrapper {
+    height: 40vh;
   }
 }
