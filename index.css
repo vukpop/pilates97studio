@@ -192,7 +192,7 @@ nav {
 }
 
 .hero-image-wrapper img {
-  object-position: top;
+  object-position: center;
   /* transform: scale(1.35); */
   /* transform-origin: center 20%; */
 }
@@ -289,6 +289,12 @@ nav {
 
 .map-container:hover {
   filter: grayscale(0%) opacity(1);
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    filter: grayscale(0%) opacity(1);
+  }
 }
 
 .address-bar {
@@ -533,6 +539,6 @@ footer {
   }
 
   .hero-image-wrapper {
-    height: 40vh;
+    height: 65vh;
   }
 }
