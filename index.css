@@ -91,6 +91,17 @@ header {
   color: white;
   pointer-events: none;
   /* Let clicks pass through if needed, except on links */
+    transition: var(--transition-smooth);
+}
+
+header.scrolled {
+  background-color: rgba(234, 234, 230, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  mix-blend-mode: normal;
+  color: var(--color-text);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
 }
 
 nav {
