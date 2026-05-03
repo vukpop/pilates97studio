@@ -344,6 +344,26 @@ footer {
   letter-spacing: 0.1em;
 }
 
+.footer-credit {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+.footer-credit a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-credit a:hover {
+  opacity: 1;
+  color: var(--color-text);
+}
+
 /* Animations */
 .reveal {
   opacity: 0;
